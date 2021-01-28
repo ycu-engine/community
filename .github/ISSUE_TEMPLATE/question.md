@@ -3,7 +3,8 @@ name: 解決方法を探している時用
 about: 問題の解決方法がわからない場合はこちらから
 title: ''
 labels: ''
-assignees: '@ycu-engine/engine-core'
+assignees: ''
+
 ---
 
 ※ `※`で始まっている行は作成する前に削除してください。

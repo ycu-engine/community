@@ -2,8 +2,9 @@
 name: 調べたことなどを共有したい時用
 about: アウトプットしたい時はこちらから
 title: ''
-labels: アウトプット
-assignees: '@ycu-engine/begginer'
+labels: アウトプット, ビギナー
+assignees: ''
+
 ---
 
 ※ `※`で始まっている行は作成する前に削除してください。
