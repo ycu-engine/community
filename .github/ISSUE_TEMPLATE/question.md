@@ -29,7 +29,9 @@ assignees: ''
 
 ※ 該当するソースコードを記載してください。ソースコードが長すぎる場合はソースコードへのリンクを貼り付けるでも構いません。ソースコードを記載する際は[Syntax Highlight](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting)が効くようにしてください。
 ※ 例：
-※ `python ※ print('Hello World') # 改行が入ってしまう ※ `
+※ ```python
+※ print('Hello World') # 改行が入ってしまう 
+※ ```
 
 # 調べたこと
 
