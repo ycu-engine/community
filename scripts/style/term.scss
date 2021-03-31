@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Noto Serif JP';
+  src: url('scripts/style/Noto_Serif_JP/NotoSerifJP-ExtraLight.otf')
+      format('opentype'),
+    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Light.otf') format('opentype'),
+    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype'),
+    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Regular.otf')
+      format('opentype'),
+    url('scripts/style/Noto_Serif_JP/NotoSerifJP-SemiBold.otf')
+      format('opentype'),
+    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Bold.otf') format('opentype'),
+    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Black.otf') format('opentype');
+}
+
+body {
+  padding-top: 3rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  counter-reset: section;
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+// タイトル
+h1 {
+  text-align: center;
+  counter-reset: clause;
+  font-size: 1.33rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+  // 制定
+
+  & + p {
+    text-align: right;
+  }
+}
+
+// 章
+h2 {
+  margin-bottom: 0.5rem;
+
+  &::before {
+    counter-increment: section;
+    content: counter(section) '. ';
+  }
+
+  // 条項
+  & ~ p {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    margin-bottom: 0.2rem;
+    margin-left: 2rem;
+    &::before {
+      flex-shrink: 0;
+      -webkit-flex-shrink: 0;
+      counter-increment: clause;
+      content: '第' counter(clause) '条';
+      width: 4.5rem;
+    }
+  }
+}
