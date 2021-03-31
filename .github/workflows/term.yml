@@ -8,6 +8,7 @@ on:
       - temrs.md
       - scripts/make-term.ts
       - scripts/style/term.scss
+      - .github/workflows/term.yml
 
 jobs:
   renew-term:
@@ -34,10 +35,10 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: Engine_団体規約_${{ steps.current-time.outputs.formattedTime }}.html
+          name: engine_rules_${{ steps.current-time.outputs.formattedTime }}.html
           path: ./term.html
 
       - uses: actions/upload-artifact@v2
         with:
-          name: Engine_団体規約_${{ steps.current-time.outputs.formattedTime }}.pdf
+          name: engine_rules_${{ steps.current-time.outputs.formattedTime }}.pdf
           path: ./term.pdf
