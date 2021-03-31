@@ -66,12 +66,14 @@ const font = `
   }
 `
 
-const html = `<body>
-<style>${font}</style>
-<style>${scss}</style>
-${res}
-</body>`
+const html = `
+<body>
+  <style>${font}</style>
+  <style>${scss}</style>
+  ${res}
+</body>
+`
 
 writeFileSync('./term.html', html)
 
-pdf.create(html).toFile('./term.pdf')
+pdf.create(html).toFile('./term.pdf', () => {})

@@ -7,13 +7,15 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "typesync",
-    "test": "ts-node-dev --watch scripts,terms.md --respawn scripts/make-term.ts"
+    "make-term": "ts-node scripts/make-term.ts",
+    "make-term:dev": "ts-node-dev --watch scripts,terms.md --respawn scripts/make-term.ts"
   },
   "dependencies": {
     "html-pdf": "^2.2.0",
     "markdown-it": "^12.0.4",
     "markdown-it-container": "^3.0.0",
     "sass": "^1.32.8",
+    "ts-node": "^9.1.1",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.3"
   },
