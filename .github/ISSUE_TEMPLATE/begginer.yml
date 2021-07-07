@@ -6,7 +6,7 @@ labels:
   - ビギナー
 body:
   - type: textarea
-    id: TL;DR
+    id: tl_dr
     attributes:
       label: TL;DR
       description: |
@@ -20,7 +20,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: 内容
+    id: body
     attributes:
       label: TL;DR
       description: |
@@ -28,7 +28,7 @@ body:
     validations:
       required: false
   - type: textarea
-    id: 参考資料
+    id: reference
     attributes:
       label: TL;DR
       description: |
