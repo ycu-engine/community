@@ -1,0 +1,37 @@
+name: ビギナーチームで調べたことなどを共有したい時用
+description: ビギナーとして共有する場合はこちら
+title: "[アウトプット]: "
+labels:
+  - アウトプット
+  - ビギナー
+body:
+  - type: textarea
+    id: TL;DR
+    attributes:
+      label: TL;DR
+      description: |
+        今回の共有内容をできるだけ簡潔にまとめてください。
+        3 行以内にまとめられれば理想的です。
+        
+        例： 
+        - Python で簡単にデバッグをやる方法
+        - print(f"{name=}")はprint(f"name={name}")と同じになる。
+        - ただし、python3.7 以降でしか使えない
+    validations:
+      required: true
+  - type: textarea
+    id: 内容
+    attributes:
+      label: TL;DR
+      description: |
+        ここには比較的自由に内容を書いて行ってください。
+    validations:
+      required: false
+  - type: textarea
+    id: 参考資料
+    attributes:
+      label: TL;DR
+      description: |
+        調べた際に参考になったものなどあれば記載してください。
+    validations:
+      required: false
