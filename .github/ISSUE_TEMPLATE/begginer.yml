@@ -22,7 +22,7 @@ body:
   - type: textarea
     id: body
     attributes:
-      label: TL;DR
+      label: 内容
       description: |
         ここには比較的自由に内容を書いて行ってください。
     validations:
@@ -30,7 +30,7 @@ body:
   - type: textarea
     id: reference
     attributes:
-      label: TL;DR
+      label: 参考資料
       description: |
         調べた際に参考になったものなどあれば記載してください。
     validations:
