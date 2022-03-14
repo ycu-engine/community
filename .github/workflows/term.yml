@@ -9,6 +9,7 @@ on:
       - scripts/make-term.ts
       - scripts/style/term.scss
       - .github/workflows/term.yml
+  workflow_dispatch:
 
 jobs:
   renew-term:
