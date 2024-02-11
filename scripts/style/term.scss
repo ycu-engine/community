@@ -1,17 +1,3 @@
-@font-face {
-  font-family: 'Noto Serif JP';
-  src: url('scripts/style/Noto_Serif_JP/NotoSerifJP-ExtraLight.otf')
-      format('opentype'),
-    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Light.otf') format('opentype'),
-    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype'),
-    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Regular.otf')
-      format('opentype'),
-    url('scripts/style/Noto_Serif_JP/NotoSerifJP-SemiBold.otf')
-      format('opentype'),
-    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Bold.otf') format('opentype'),
-    url('scripts/style/Noto_Serif_JP/NotoSerifJP-Black.otf') format('opentype');
-}
-
 body {
   padding-top: 3rem;
   max-width: 500px;
