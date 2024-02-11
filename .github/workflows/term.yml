@@ -5,41 +5,38 @@ on:
     branches:
       - main
     paths:
+      - .github/workflows/term.yml
       - temrs.md
       - scripts/make-term.ts
       - scripts/style/term.scss
-      - .github/workflows/term.yml
   workflow_dispatch:
 
 jobs:
   renew-term:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4.1.1
+      - uses: actions/setup-node@v4.0.2
         with:
-          node-version: '14.x'
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          node-version-file: .node-version
+      - run: corepack enable pnpm
       - name: Get current time
-        uses: 1466587594/get-current-time@v2
+        uses: josStorer/get-current-time@v2.1.1
         id: current-time
         with:
           format: YYYY-MM-DD
           utcOffset: '+09:00'
       - name: install
-        run: yarn
+        run: pnpm install
       - name: make pdf
-        run: yarn make-term
+        run: pnpm run make-term
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4.3.1
         with:
           name: engine_rules_${{ steps.current-time.outputs.formattedTime }}.html
           path: ./term.html
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4.3.1
         with:
           name: engine_rules_${{ steps.current-time.outputs.formattedTime }}.pdf
           path: ./term.pdf
